@@ -26,9 +26,13 @@ export const NewMovie: React.FC<Props> = ({ onAdd }) => {
   };
 
   const clearFields = () => {
-    for (const key in field) {
-      handleEvent(key, '');
-    }
+    setField({
+      title: '',
+      description: '',
+      imgUrl: '',
+      imdbUrl: '',
+      imdbId: '',
+    });
   };
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
